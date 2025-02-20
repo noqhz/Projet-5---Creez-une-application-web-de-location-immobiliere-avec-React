@@ -1,7 +1,7 @@
 import './App.scss'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home/'
-import Logements from './pages/Logements/'
+import Logements from './pages/Logement/'
 import Apropos from './pages/Apropos/'
 import Error from './pages/Error/'
 import Header from './components/header.jsx'
