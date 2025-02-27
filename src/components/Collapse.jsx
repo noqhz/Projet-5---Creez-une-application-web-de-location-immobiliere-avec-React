@@ -16,8 +16,12 @@ function Collapse({ title, children }) {
                 <h2>{title}</h2>
                 <span className={`collapse-icon ${isOpen ? 'open' : ''}`}><img src={Arrow} alt="collapse on/off" /></span>
             </div>
-            {isOpen && <div className="collapse-content">{children}</div>}
+            <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+                {children}
+            </div>
+            {/* {isOpen && <div className="collapse-content">{children}</div>} */}
         </div>
+        
     );
 }
 
