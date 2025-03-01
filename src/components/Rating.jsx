@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import '../App.scss';
 import GrayStar from '../assets/gray-star.png';
 import RedStar from '../assets/red-star.png';
+import './Rating.scss';
 
 function Rating({ value }) {
     const stars = [];

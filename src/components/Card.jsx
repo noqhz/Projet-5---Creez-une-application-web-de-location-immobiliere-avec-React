@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import './Card.scss';
 
 function Card({ label, title, picture }) {
     return (
@@ -16,4 +17,4 @@ Card.propTypes = {
     picture: PropTypes.string,
 }
  
-export default Card
+export default Card;

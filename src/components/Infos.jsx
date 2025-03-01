@@ -2,26 +2,23 @@ import PropTypes from 'prop-types';
 import '../App.scss';
 import Collapse from '../components/Collapse';
 import Rating from '../components/Rating';
+import './Infos.scss';
 
 function Infos({ title, description, host, rating, location, equipments, tags }) {
     return (
-        // <div>
-        // {ficheLogement.title}
-        // <img src={ficheLogement.cover} alt="test" height={80} width={80} />
-        // </div>
         <div className="infos">
-          <div className="infos__cover">
+          <div className="infos__header">
             <div className="infos__title">
               <h1>{title}</h1>
               <p>{location}</p>
             </div>
-            <div className="host">
+            <div className="infos__host">
               <p>{host.name.replace(" ", "\n")}</p>
               <img src={host.picture} alt={host.name} />
             </div>
           </div>
-          <div className="infos__tags">
-            <div className="tags">
+          <div className="infos__details">
+            <div className="infos__tags">
               {tags.map((tag, index) => (
               <span key={index} className="tag">{tag}</span>
               ))}
@@ -56,4 +53,3 @@ Infos.propTypes = {
   };
 
 export default Infos;
-

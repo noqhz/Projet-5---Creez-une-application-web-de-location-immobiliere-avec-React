@@ -1,0 +1,20 @@
+@import '../Variables.scss';
+
+.home {
+    @extend %flex-column-center;
+  }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+  column-gap: 50px;
+  max-width: 1240px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  padding: 50px;
+
+  a {
+    text-decoration: none;
+  }
+}

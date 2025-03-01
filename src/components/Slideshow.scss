@@ -1,0 +1,41 @@
+@import '../Variables.scss';
+
+.slideshow {
+    position: relative;
+    width: 1240px;
+    height: 415px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 25px;
+  
+    &-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+  
+      &.prev {
+        left: 10px;
+      }
+  
+      &.next {
+        right: 10px;
+      }
+    }
+  
+    &-indicator {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }

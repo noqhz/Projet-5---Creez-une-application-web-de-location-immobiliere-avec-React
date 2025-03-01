@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
+import './Banner.scss';
  
 function Banner({img,title}) {
     return (
             <div className="banner">
-                <img src={img} alt={title} className="banner__image" />
-                <p className="banner__title">{title}</p>
+                <img src={img} alt={title} />
+                <p>{title}</p>
             </div>
     )
 }

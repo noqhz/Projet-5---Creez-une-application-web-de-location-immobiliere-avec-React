@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import '../App.scss';
 import Left from '../assets/slideshow_left.png';
 import Right from '../assets/slideshow_right.png';
+import './Slideshow.scss';
 
 function Slideshow({ pictures }) {
+
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const nextSlide = () => {
@@ -19,13 +21,13 @@ function Slideshow({ pictures }) {
         <div className="slideshow">
 
             {pictures.length > 1 && (
-            <button className="slideshow-button prev" onClick={prevSlide}><img src={Left} alt="previous" /></button>
+            <button className="slideshow-button prev" onClick={prevSlide}><img src={Left} alt="précédent " /></button>
             )}
 
-            <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} className="slideshow-image" />
+            <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
             
             {pictures.length > 1 && (
-            <button className="slideshow-button next" onClick={nextSlide}><img src={Right} alt="next" /></button>
+            <button className="slideshow-button next" onClick={nextSlide}><img src={Right} alt="suivant" /></button>
             )}
 
             {pictures.length > 1 && (
