@@ -1,11 +1,10 @@
 @import '../Variables.scss';
 
 .collapse {
-    overflow: hidden;
-    width: 1020px;
+    width: 82.5%;
     margin-bottom: 30px;
   
-    &-title {
+    &__title {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -14,13 +13,17 @@
       color: white;
       padding: 10px;
       border-radius: 10px;
+      box-sizing: border-box;
+      height: 52px;
   
       h2{
         margin: 0;
+        font-size: 24px;
+        font-weight: bold;
       }
     }
   
-    &-icon {
+    &__icon {
       transition: transform 0.3s;
   
       &.open {
@@ -28,7 +31,8 @@
       }
     }
   
-    &-content {
+    &__content {
+      width: 100%;
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease-out;
@@ -40,6 +44,24 @@
       &.open {
         max-height: 500px;
         transition: max-height 0.3s ease-in;
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 86.11%;
+      min-width: 335px;
+      margin-bottom: 20px;
+
+      &__title {
+        height: 30px;
+        
+        h2{
+          font-size: 13px;
+        }
+      }
+
+      &__content {
+        font-size: 12px;
       }
     }
   }

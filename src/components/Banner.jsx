@@ -12,7 +12,7 @@ function Banner({img,title}) {
 
 Banner.propTypes = {
     img: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    title: PropTypes.node.isRequired,
 }
 
 export default Banner;

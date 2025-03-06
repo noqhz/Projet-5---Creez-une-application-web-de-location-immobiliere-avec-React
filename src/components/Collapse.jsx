@@ -13,11 +13,11 @@ function Collapse({ title, children }) {
 
     return (
         <div className="collapse">
-            <div className="collapse-title" onClick={toggleCollapse}>
+            <div className="collapse__title" onClick={toggleCollapse}>
                 <h2>{title}</h2>
-                <span className={`collapse-icon ${isOpen ? 'open' : ''}`}><img src={Arrow} alt="Afficher / Masquer" /></span>
+                <span className={`collapse__icon ${isOpen ? 'open' : ''}`}><img src={Arrow} alt="Afficher / Masquer" /></span>
             </div>
-            <div className={`collapse-content ${isOpen ? 'open' : ''}`}>
+            <div className={`collapse__content ${isOpen ? 'open' : ''}`}>
                 {children}
             </div>
         </div>

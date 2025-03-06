@@ -21,17 +21,17 @@ function Slideshow({ pictures }) {
         <div className="slideshow">
 
             {pictures.length > 1 && (
-            <button className="slideshow-button prev" onClick={prevSlide}><img src={Left} alt="précédent " /></button>
+            <button className="slideshow__button prev" onClick={prevSlide}><img src={Left} alt="précédent " /></button>
             )}
 
-            <img src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+            <img src={pictures[currentIndex]} className="slideshow__image" alt={`Slide ${currentIndex + 1}`} />
             
             {pictures.length > 1 && (
-            <button className="slideshow-button next" onClick={nextSlide}><img src={Right} alt="suivant" /></button>
+            <button className="slideshow__button next" onClick={nextSlide}><img src={Right} alt="suivant" /></button>
             )}
 
             {pictures.length > 1 && (
-            <div className="slideshow-indicator">
+            <div className="slideshow__indicator">
                 {currentIndex + 1} / {pictures.length}
             </div>
             )}

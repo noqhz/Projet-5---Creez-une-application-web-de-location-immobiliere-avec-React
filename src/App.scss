@@ -7,3 +7,8 @@
   text-align: center;
   font-family: $main-font;
 }
+
+html, body {
+  margin: 0;
+  overflow-x: hidden;
+}

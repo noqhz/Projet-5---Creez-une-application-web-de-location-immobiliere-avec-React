@@ -22,4 +22,28 @@
       color: black;
       text-decoration: underline;
     }
+
+    br {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      height: 255px;
+
+      h1 {
+        font-size: 96px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      a {
+        font-size: 14px;
+      }
+
+      br {
+        display: block;
+      }
+    }
   }

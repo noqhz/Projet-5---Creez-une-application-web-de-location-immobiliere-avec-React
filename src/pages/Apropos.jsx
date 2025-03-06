@@ -8,7 +8,7 @@ function Apropos() {
   return (
     <div className="about">
       <Banner img={ImgAbout} title="" />
-      <div className="about-collapse">
+      <div className="about__collapse">
         {aproposData.map((item, index) => (
           <Collapse key={index} title={item.title}>
             <p>{item.content}</p>

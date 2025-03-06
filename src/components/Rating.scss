@@ -2,10 +2,17 @@
 
 .rating {
     display: flex;
-    gap: 5px;
+    gap: 18px;
 }
 
-.star {
-    width: 20px;
-    height: 20px;
+@media (max-width: 768px) {
+
+    .rating {
+        gap: 8px;
+    }
+
+    .star {
+        width: 13px;
+        height: 13px;
+    }
 }

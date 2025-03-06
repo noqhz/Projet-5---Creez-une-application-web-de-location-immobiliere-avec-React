@@ -2,7 +2,8 @@
 
 .banner {
     position: relative;
-    width: 1240px;
+    width: 86.11%;
+    max-width: 1240px;
     height: 223px;
     display: flex;
     align-items: center;
@@ -21,8 +22,29 @@
     p {
       position: absolute;
       color: white;
-      font-size: 30px;
-      font-weight: 700;
+      font-size: 48px;
+      font-weight: bold;
       text-align: center;
+    }
+
+    br {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      width: 86.11%;
+      min-width: 335px;
+      height: 111px;
+      justify-content: flex-start;
+
+      p {
+        font-size: 24px;
+        text-align: left;
+        padding-left: 30px;
+      }
+
+      br {
+        display: block;
+      }
     }
   }

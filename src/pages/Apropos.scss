@@ -4,5 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+
+    &__collapse {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 86.11%;
+      max-width: 1240px;
+    }
   }

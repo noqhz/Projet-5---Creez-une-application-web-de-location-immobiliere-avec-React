@@ -3,9 +3,12 @@
 header {
     @extend %flex-between-center;
     padding: 20px;
+    width: 86.11%;
+    max-width: 1240px;
+    margin: 0 auto;
     
     img {
-      width: 150px;
+      width: 210px;
     }
   
     nav {
@@ -21,6 +24,20 @@ header {
     a {
       text-decoration: none;
       color: black;
-      font-size: 20px;
+      font-size: 24px;
+    }
+
+    @media (max-width: 768px) {
+      width: 86.11%;
+      min-width: 335px;
+
+      img {
+        width: 145px;
+      }
+
+      a {
+        text-transform: uppercase;
+        font-size: 16px;
+      }
     }
   }

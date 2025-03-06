@@ -7,24 +7,31 @@ import './Infos.scss';
 function Infos({ title, description, host, rating, location, equipments, tags }) {
     return (
         <div className="infos">
-          <div className="infos__header">
-            <div className="infos__title">
-              <h1>{title}</h1>
-              <p>{location}</p>
+
+          <div className="infos__main">
+
+            <div className="infos__header">
+              <div className="infos__title">
+                <h1>{title}</h1>
+                <p>{location}</p>
+              </div>
+              <div className="infos__tags">
+                {tags.map((tag, index) => (
+                <span key={index} className="tag">{tag}</span>
+                ))}
+              </div>
             </div>
-            <div className="infos__host">
-              <p>{host.name.replace(" ", "\n")}</p>
-              <img src={host.picture} alt={host.name} />
+            
+            <div className="infos__details">
+              <div className="infos__host">
+                  <p>{host.name.replace(" ", "\n")}</p>
+                  <img src={host.picture} alt={host.name} />
+              </div>
+              <Rating value={parseInt(rating, 10)} />
             </div>
+
           </div>
-          <div className="infos__details">
-            <div className="infos__tags">
-              {tags.map((tag, index) => (
-              <span key={index} className="tag">{tag}</span>
-              ))}
-            </div>
-            <Rating value={parseInt(rating, 10)} />
-          </div>
+
           <div className="infos__collapse">
             <Collapse title="Description">
               <p>{description}</p>
@@ -35,6 +42,7 @@ function Infos({ title, description, host, rating, location, equipments, tags })
               ))}</p>
             </Collapse>
           </div>
+
         </div>
     )
 }

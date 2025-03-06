@@ -8,7 +8,7 @@ import './Home.scss';
 function Home() {
   return (
     <div className="home">
-      <Banner img={ImgHome} title="Chez vous, partout et ailleurs" />
+      <Banner img={ImgHome} title={<>Chez vous,<br /> partout et ailleurs</>} />
       <div className="gallery">
       {logements.map((logement) => (
                 <Link to= {`/logement/${logement.id}`} key={logement.id}>
